@@ -1,4 +1,5 @@
 import os
+import random
 import discord
 from dotenv import load_dotenv
 
@@ -11,6 +12,28 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
+
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+    staff = 'Our staff team consists of @eth#3101, @helix#8781, @revv#8367, and @zan#2327. Feel free to tag' \
+            ' @OG Sellouts or @Admin if you have any questions!'
+    pog = [
+        'pog',
+        'poggers',
+        'pogCHAMP',
+        'pogies',
+        'pog champ'
+    ]
+
+    if message.content == 'staff':
+        response = staff
+        await message.channel.send(response)
+    if 'pog' in message.content.lower():
+        response = random.choice(pog)
+        await message.channel.send(response)
 
 
 client.run(TOKEN)
