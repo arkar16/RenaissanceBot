@@ -129,4 +129,6 @@ dmypy.json
 .pyre/
 
 # Add Ons
-.idea/
+.idea/versions/
+.idea
+versions
