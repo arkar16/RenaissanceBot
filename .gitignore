@@ -132,3 +132,5 @@ dmypy.json
 .idea/versions/
 .idea
 versions
+venv
+.DS_Store
