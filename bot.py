@@ -18,7 +18,9 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    staff = 'Our staff team consists of @eth#3101, @helix#8781, @revv#8367, and @zan#2327. Feel free to tag' \
+    staff = 'Our staff team consists of @eth#3101, @helix#8781, @revv#8367, @zan#2327, along with @Cleft#5166. ' \
+            'Feel free ' \
+            'to tag' \
             ' @OG Sellouts or @Admin if you have any questions!'
     pog = [
         'pog',
@@ -28,12 +30,21 @@ async def on_message(message):
         'pog champ'
     ]
 
+    chirag = [
+        'STOP! Good God man! You almost got the cheese touch...'
+    ]
+
     if message.content == 'staff':
         response = staff
         await message.channel.send(response)
+
     if 'pog' in message.content.lower():
         response = random.choice(pog)
         await message.channel.send(response)
+
+    #if 'chirag' in message.content.lower():
+        #response = random.choice(chirag)
+        #await message.channel.send(response)
 
 
 client.run(TOKEN)
