@@ -38,13 +38,9 @@ async def on_message(message):
         response = staff
         await message.channel.send(response)
 
-    if 'pog' in message.content.lower():
-        response = random.choice(pog)
+    if 'chirag' in message.content.lower():
+        response = random.choice(chirag)
         await message.channel.send(response)
-
-    #if 'chirag' in message.content.lower():
-        #response = random.choice(chirag)
-        #await message.channel.send(response)
 
 
 client.run(TOKEN)
