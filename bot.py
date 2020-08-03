@@ -22,13 +22,6 @@ async def on_message(message):
             'Feel free ' \
             'to tag' \
             ' @OG Sellouts or @Admin if you have any questions!'
-    pog = [
-        'pog',
-        'poggers',
-        'pogCHAMP',
-        'pogies',
-        'pog champ'
-    ]
 
     chirag = [
         'STOP! Good God man! You almost got the cheese touch...'
