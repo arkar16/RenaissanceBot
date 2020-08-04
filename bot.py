@@ -13,7 +13,7 @@ client = discord.Client()
 bot = commands.Bot(command_prefix='-')
 
 
-@client.event
+@bot.event
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
 
@@ -28,7 +28,7 @@ async def staff(ctx):
     await ctx.send(response)
 
 
-@client.event
+@bot.event
 async def on_message(message):
     if message.author == client.user:
         return
@@ -43,3 +43,4 @@ async def on_message(message):
 
 
 bot.run(TOKEN)
+
