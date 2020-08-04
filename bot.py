@@ -8,14 +8,12 @@ from discord.ext import commands
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
-client = discord.Client()
-
 bot = commands.Bot(command_prefix='-')
 
 
-@client.event
+@bot.event
 async def on_ready():
-    print(f'{client.user} has connected to Discord!')
+    print(f'{bot.user} has connected to Discord!')
 
 
 @bot.command(name='staff')
@@ -28,9 +26,9 @@ async def staff(ctx):
     await ctx.send(response)
 
 
-@client.event
+@bot.event
 async def on_message(message):
-    if message.author == client.user:
+    if message.author == bot.user:
         return
 
     chirag = [
@@ -41,6 +39,7 @@ async def on_message(message):
         response = random.choice(chirag)
         await message.channel.send(response)
 
-client.run(TOKEN)
+    await bot.process_commands(message)
+
 bot.run(TOKEN)
 
